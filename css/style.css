@@ -1,0 +1,319 @@
+*, *::before, *::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light dark;
+  color: #242424;
+  background-color: #ffffff;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  --main: rgb(15, 14, 14);
+  --secondary: rgb(253, 251, 249);
+}
+
+h1, h2, h3, p {
+  margin: 0;
+  padding: 0;
+  line-height: 100%;
+  color: var(--main);
+  text-transform: uppercase;
+  -webkit-transition: color 1s ease-in;
+  transition: color 1s ease-in;
+}
+
+.quoteapp__header-title {
+  font-style: italic;
+}
+
+.quoteapp__content {
+  font-style: italic;
+}
+
+body {
+  height: 100vh;
+  background-color: var(--secondary);
+  -webkit-transition: background-color 2s ease-in;
+  transition: background-color 2s ease-in;
+}
+
+.quoteapp {
+  height: 100%;
+  padding: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  overflow: hidden;
+}
+
+/*menu - light toggler */
+.quoteapp__light {
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  position: relative;
+}
+
+.quoteapp__light-toggler {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.quoteapp__light-toggler:hover ~ .quoteapp__light-switch {
+  width: 72px;
+}
+
+.quoteapp__light-toggler:checked ~ .quoteapp__light-switch > .btn--light {
+  background: var(--main);
+}
+
+.quoteapp__light-toggler:hover:checked ~ .quoteapp__light-switch > .btn--light {
+  -webkit-transform: translate(100%, 0);
+  transform: translate(100%, 0);
+}
+
+.quoteapp__light-switch {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 36px;
+  width: 36px;
+  -webkit-box-shadow: 0 0 0 2px var(--main);
+  box-shadow: 0 0 0 2px var(--main);
+  border-radius: 50px;
+  cursor: pointer;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.btn--light {
+  width: 36px;
+  height: 36px;
+  -webkit-box-shadow: 0 0 0 2px var(--main);
+  box-shadow: 0 0 0 2px var(--main);
+  border-radius: 50%;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.quoteapp__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.quoteapp__header-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 24px;
+}
+
+.quoteapp__main {
+  width: 40vw;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  gap: 24px;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  opacity: 0;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+
+.quoteapp__content {
+  text-align: left;
+}
+
+.quoteapp__author {
+  text-align: right;
+}
+
+.show {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  opacity: 1;
+}
+
+.hide {
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  opacity: 0;
+}
+
+.quoteapp__footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.quoteapp__bestwishes {
+  cursor: default;
+  color: var(--primary);
+  text-decoration: line-through;
+  -webkit-transition: color 1s ease-in;
+  transition: color 1s ease-in;
+}
+.quoteapp__bestwishes::after {
+  display: inline-block;
+  content: "function not available";
+  opacity: 0;
+  margin-left: 24px;
+  -webkit-transform: translateX(-10%);
+          transform: translateX(-10%);
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+.quoteapp__bestwishes:hover::after {
+  text-decoration: none;
+  display: inline-block;
+  opacity: 1;
+  margin-left: 24px;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.quoteapp__btn {
+  -webkit-transition: all 1s ease-in;
+  transition: all 1s ease-in;
+}
+
+.btn--new-quote {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: none;
+  background-color: transparent;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  -webkit-transition: color 1s ease-in;
+  transition: color 1s ease-in;
+}
+.btn--new-quote:hover {
+  cursor: pointer;
+}
+
+.quoteapp__btn {
+  position: relative;
+}
+.quoteapp__btn::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  content: "";
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  background: var(--main);
+  -webkit-transform-origin: bottom center;
+          transform-origin: bottom center;
+  -webkit-transition: -webkit-transform 0.25s ease-out;
+  transition: -webkit-transform 0.25s ease-out;
+  transition: transform 0.25s ease-out;
+  transition: transform 0.25s ease-out, -webkit-transform 0.25s ease-out;
+}
+.quoteapp__btn:hover::after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+}
+
+.s {
+  font-size: 16px;
+}
+
+.m {
+  font-size: 24px;
+}
+
+.l {
+  font-size: 32px;
+}
+
+.xl {
+  font-size: 48px;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.flex--1 {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.color--main {
+  color: var(--main);
+}
+
+.color--secondary {
+  color: var(--secondary);
+}

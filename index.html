@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Vite App</title>
+  </head>
+  <body>
+    <div class="quoteapp">
+      <header class="quoteapp__header flex">
+        <div class="quoteapp__header-title">
+          <h1 class="xl">QuoteApp</h1>
+          <p class="m"> by *prrrt</p>
+        </div>
+        <div class="quoteapp__light flex">
+          <input id="js-quoteapp__light-toggler" class="js-quoteapp__light-toggler quoteapp__light-toggler" type="checkbox">
+          <label class="quoteapp__light-switch" for="js-quoteapp__light-toggler">
+              <span class="btn--light"></span>
+          </label>    
+        </div>
+        
+      </header>
+      <main class="quoteapp__main">
+        <div class="quoteapp__content">
+          
+        </div>
+        <div class="quoteapp__author">
+          <p class="xl">-lorem</p>
+        </div>
+      </main>
+      <footer class="quoteapp__footer">
+        <div class="quoteapp__bestwishes color--main l">HAVE A NICE DAY</div>
+        <div class="quoteapp__btn">
+          <div class="btn--new-quote color--main l">NEW QUOTE</div>
+        </div>
+      </footer>
+    </div>
+
+    <script src="./js/main.js"></script>
+    <script type="module" src="./js/functions.js"></script>
+    <script type="module" src="./js/events.js"></script>
+  </body>
+</html>

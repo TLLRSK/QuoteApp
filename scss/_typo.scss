@@ -1,0 +1,17 @@
+h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+    line-height: 100%;
+    color: var(--main);
+    text-transform: uppercase;
+    transition: color 1s ease-in;
+}
+
+.quoteapp__header-title {
+    font-style: italic;
+    
+}
+
+.quoteapp__content {
+    font-style: italic;
+}

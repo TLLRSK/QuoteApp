@@ -1,0 +1,11 @@
+.quoteapp__header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.quoteapp__header-title {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}

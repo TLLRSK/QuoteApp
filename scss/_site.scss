@@ -1,0 +1,13 @@
+body {
+    height: 100vh;
+    background-color: var(--secondary);
+    transition: background-color 2s ease-in;
+}
+
+.quoteapp {
+    height: 100%;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
