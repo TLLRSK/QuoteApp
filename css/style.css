@@ -31,10 +31,6 @@ h1, h2, h3, p {
   transition: color 1s ease-in;
 }
 
-.quoteapp__header-title {
-  font-style: italic;
-}
-
 .quoteapp__content {
   font-style: italic;
 }
@@ -230,8 +226,6 @@ body {
   background-color: transparent;
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
-  -webkit-transition: color 1s ease-in;
-  transition: color 1s ease-in;
 }
 .btn--new-quote:hover {
   cursor: pointer;
