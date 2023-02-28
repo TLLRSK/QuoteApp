@@ -32,18 +32,5 @@ const newQuote = () => {
     },500);
 }
 
-//toggle light
-const toggleLight = () => {
-  if (lightToggle.checked) {
-      console.log('eh')
-      document.documentElement.style.setProperty('--main', 'black');
-      document.documentElement.style.setProperty('--secondary', 'white');
-  } else {
-      document.documentElement.style.setProperty('--main', 'white');
-      document.documentElement.style.setProperty('--secondary', 'black');
-  }
-}
-
 export { getApi };
 export { newQuote };
-export { toggleLight };
