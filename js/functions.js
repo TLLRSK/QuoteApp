@@ -23,7 +23,6 @@ export const newQuote = (quoteContent, quoteAuthor, quoteMain) => {
   quoteMain.classList.add('show');
     quoteMain.classList.add('hide');
     quoteMain.classList.remove('show');
-    // 🔥
     setTimeout(() => {
       quoteMain.classList.remove('hide');
       setTimeout(() => {
