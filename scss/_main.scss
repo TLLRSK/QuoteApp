@@ -1,14 +1,19 @@
+@import './mixins';
+
 .quoteapp__main {
-    width: 40vw;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     flex: 1;
+    padding: 0 3.2rem;
     gap: 24px;
     transform: translateX(-100%);
     opacity: 0;
     transition: all .2s ease-in;
+    @include mq-720 {
+        padding: 0 12rem;
+    }
 }
 
 .quoteapp__content {

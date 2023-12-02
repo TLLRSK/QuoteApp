@@ -1,13 +1,33 @@
 h1, h2, h3, p {
     margin: 0;
     padding: 0;
-    line-height: 100%;
     color: var(--main);
     text-transform: uppercase;
     transition: color 1s ease-in;
+    font-weight: 300;
 }
 
+h1 {
+    font-family: 'bigilla', 'Courier New', Courier, monospace;
+    font-weight: 600;
+}
 
 .quoteapp__content {
     font-style: italic;
+}
+
+@font-face {
+    font-family: 'bigilla';
+    src: url('../bigilla-webfont.woff2') format('woff2'),
+         url('../bigilla-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'bigilla';
+    src: url('../bigilla-bold-webfont.woff2') format('woff2'),
+         url('../bigilla-bold-webfont.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
 }

@@ -1,14 +1,25 @@
+@import './mixins';
+
 .quoteapp__footer {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-end;
+    @include mq-720 {
+        justify-content: space-between;
+    }
 }
 
 .quoteapp__bestwishes {
+    display: none;
     cursor: default;
     color: var(--primary);
     text-decoration: line-through;
     transition: color 1s ease-in;
+    @include mq-720 {
+        display: flex;
+        align-items: flex-end;
+    }
+
     &::after {
         display: inline-block;
         content: 'function not available';
@@ -28,4 +39,5 @@
 
 .quoteapp__btn {
     transition: all 1s ease-in;
+    font-weight: 600;
 }

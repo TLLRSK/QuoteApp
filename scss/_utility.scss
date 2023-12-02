@@ -1,27 +1,17 @@
-
-
-$font-sizes: (
-    's': 16px,
-    'm': 24px,
-    'l': 32px,
-    'xl': 48px
-);
-
-
+//fonts
 
 .s {
-    font-size: map-get($font-sizes, 's');
+    font-size: clamp(1.2rem, 3vw, 1.6rem);
 }
 .m {
-    font-size: map-get($font-sizes, 'm');
+    font-size: clamp(2rem, 3vw, 2.4rem);
 }
 .l {
-    font-size: map-get($font-sizes, 'l');
+    font-size: clamp(1.6rem, 3vw, 3.2rem);
 }
 .xl {
-    font-size: map-get($font-sizes, 'xl');
+    font-size: clamp(2.4rem, 3vw, 4.8rem);
 }
-
 
 //display
 .flex {
@@ -41,11 +31,15 @@ $font-sizes: (
 }
 
 //colors
-
 .color--main {
     color: var(--main);
 }
 
 .color--secondary {
     color: var(--secondary);
+}
+
+//size
+.height-fit {
+    height: fit-content;
 }
