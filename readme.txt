@@ -10,7 +10,7 @@ Made with:
 - Javascript
 
 Live:
-https://blancaamoros.com/
+https://quoteapp-pjgv.netlify.app/
 
 
 📗 WHAT I'VE LEARNT 📗
